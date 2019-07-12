@@ -18,7 +18,7 @@ struct CardView <Data>: View where Data: Item {
                 
                 Text(item.title)
                     .bold()
-                    .lineLimit(2)
+                    .lineLimit(2) //设置文本最多显示两行
                     .foregroundColor(Color.white)
                     .fixedSize() //调整容器大小
                     .padding(10)
@@ -27,10 +27,8 @@ struct CardView <Data>: View where Data: Item {
                 //设置图片
                 Image(item.imageName)
                     .resizable()
-                    .renderingMode(.original)
+                    .renderingMode(.original) //设置图片渲染为图片原来的颜色 加 NavigationLink 图片呗渲染成蓝色
                     .aspectRatio(contentMode: .fill)
-                
-                
             }
             .background(item.color) //设置背景色 Color 准守View 协议
             .cornerRadius(20)  //设置圆角

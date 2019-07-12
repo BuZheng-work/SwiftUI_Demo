@@ -33,14 +33,13 @@ struct HomeView : View {
                 
                 ToolBarView(menuAction: openMenu, userAction: openUser, mesageAction: openMessage)
                 
-                Button(action: openMenu) {
-                    MenuView()
-                }
+                // 添加菜单
+                Button(action: openMenu) { MenuView() }
                 .offset(x: isMenu ? 0 : -UIScreen.main.bounds.width)
-                .rotation3DEffect(Angle(degrees: isMenu ? 0 : 30), axis: (x: 0, y: 10, z: 0))
+                    // 添加3D效果 scroller 滑动很困难暂为找到解决办法
+//                .rotation3DEffect(Angle(degrees: isMenu ? 0 : 30), axis: (x: 0, y: 10, z: 0))
+
                 .animation(.basic(duration: 0.25, curve: .easeInOut))
-                
-                
             }
             .background(Color("background"))
             .navigationBarTitle("练习Demo", displayMode: .inline) //设置导航文字和 样式

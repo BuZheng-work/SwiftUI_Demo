@@ -50,10 +50,6 @@ struct MenuView : View {
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
         .padding(.trailing, 50)
         .padding(.bottom, 10)
-        
     }
-    
-    func action() {
-        
-    }
+
 }
