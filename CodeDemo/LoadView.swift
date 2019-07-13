@@ -18,6 +18,14 @@ struct LoadView : View {
     
     var body: some View {
         VStack(spacing: 10) {
+            
+            Image("logo")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .frame(width: 200, height: 150)
+                .padding()
+            
+            
             // StaticMember 设置各种控件style 暂时没有ButtonStyle 的样式只有空扩展
             TextField("输入你的账号", text: $account,onEditingChanged: accountEdit, onCommit: commit)
                 .textFieldStyle(.roundedBorder)
@@ -27,6 +35,7 @@ struct LoadView : View {
                 .textFieldStyle(.roundedBorder)
                 .padding(.leading)
                 .padding(.trailing)
+                .padding(.bottom, 40)
             
             Button(action: verify(at: account, pwass: pwass)) {
                 Image("loadbut")
