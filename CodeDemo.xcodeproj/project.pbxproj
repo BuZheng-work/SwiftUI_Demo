@@ -13,6 +13,8 @@
 		8F4C60C222D849BF00CA9261 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C122D849BF00CA9261 /* CardView.swift */; };
 		8F4C60C422D84F5100CA9261 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C322D84F5100CA9261 /* MenuView.swift */; };
 		8F4C60C622D8663F00CA9261 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C522D8663F00CA9261 /* WalletView.swift */; };
+		8F4C60C822D9746400CA9261 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C722D9746400CA9261 /* LoadView.swift */; };
+		8F4C60CA22D9944C00CA9261 /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C922D9944C00CA9261 /* Sources.swift */; };
 		8FD9AF8122D7206D00CAA508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8022D7206D00CAA508 /* AppDelegate.swift */; };
 		8FD9AF8322D7206D00CAA508 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8222D7206D00CAA508 /* SceneDelegate.swift */; };
 		8FD9AF8522D7206D00CAA508 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8422D7206D00CAA508 /* HomeView.swift */; };
@@ -28,6 +30,8 @@
 		8F4C60C122D849BF00CA9261 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		8F4C60C322D84F5100CA9261 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		8F4C60C522D8663F00CA9261 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
+		8F4C60C722D9746400CA9261 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
+		8F4C60C922D9944C00CA9261 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
 		8FD9AF7D22D7206D00CAA508 /* CodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD9AF8022D7206D00CAA508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD9AF8222D7206D00CAA508 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,12 +75,14 @@
 				8FD9AF8022D7206D00CAA508 /* AppDelegate.swift */,
 				8FD9AF8222D7206D00CAA508 /* SceneDelegate.swift */,
 				8FD9AF8422D7206D00CAA508 /* HomeView.swift */,
+				8F4C60C722D9746400CA9261 /* LoadView.swift */,
 				8F4C60BF22D8499B00CA9261 /* CardScrollerView.swift */,
 				8F4C60C122D849BF00CA9261 /* CardView.swift */,
 				8F4C60BD22D8497600CA9261 /* ToolBarView.swift */,
 				8F4C60C322D84F5100CA9261 /* MenuView.swift */,
 				8F4C60C522D8663F00CA9261 /* WalletView.swift */,
 				8F1AC6C422D77FCF00D6CBCA /* DetailView.swift */,
+				8F4C60C922D9944C00CA9261 /* Sources.swift */,
 				8FD9AF8622D7206E00CAA508 /* Assets.xcassets */,
 				8FD9AF8B22D7206E00CAA508 /* LaunchScreen.storyboard */,
 				8FD9AF8E22D7206E00CAA508 /* Info.plist */,
@@ -164,8 +170,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F4C60C822D9746400CA9261 /* LoadView.swift in Sources */,
 				8F4C60C222D849BF00CA9261 /* CardView.swift in Sources */,
 				8F4C60C622D8663F00CA9261 /* WalletView.swift in Sources */,
+				8F4C60CA22D9944C00CA9261 /* Sources.swift in Sources */,
 				8F4C60C422D84F5100CA9261 /* MenuView.swift in Sources */,
 				8FD9AF8122D7206D00CAA508 /* AppDelegate.swift in Sources */,
 				8FD9AF8322D7206D00CAA508 /* SceneDelegate.swift in Sources */,

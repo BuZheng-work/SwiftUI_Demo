@@ -75,15 +75,10 @@ struct BankCardView: View {
             }
         }
         .background(Color(bank.colorName))
-        .frame(width: UIScreen.main.bounds.width - 30, height: 200)
+        .frame(width: SW - 30, height: 200)
         .cornerRadius(10)
         .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
-        .tapAction(tap)
-    }
-    
-    func tap() {
-        print("===\(bank.name)")
-        tapHundler(bank.name)
+        .tapAction {self.tapHundler(self.bank.name)}
     }
     
 }
@@ -97,9 +92,4 @@ struct Bank: Identifiable {
 }
 
 
-let banks = [
-            Bank(name: "中国银行", shortName: "BOC",bankNumber: "******9075",colorName: "background10"),
-             Bank(name: "农业银行", shortName: "ABC",bankNumber: "******8082",colorName: "background6"),
-             Bank(name: "招商银行", shortName: "CMB",bankNumber: "******8808",colorName: "background5"),
-             Bank(name: "工商银行", shortName: "ICBC",bankNumber: "******0880",colorName: "background4"),
-             Bank(name: "交通银行", shortName: "BOCOM",bankNumber: "******9527",colorName: "background3")]
+

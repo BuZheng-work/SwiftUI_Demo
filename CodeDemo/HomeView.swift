@@ -11,9 +11,9 @@ import SwiftUI
 struct HomeView : View {
     
     @State var isMenu = false
+    @State var isModel = false
     
     var body: some View {
-        
         //设置导航
         NavigationView {
             
@@ -31,30 +31,29 @@ struct HomeView : View {
                     }
                 }
                 
+                // 添加顶部工具条
                 ToolBarView(menuAction: openMenu, userAction: openUser, mesageAction: openMessage)
                 
-                // 添加菜单
+                // 添加菜单视图
                 Button(action: openMenu) { MenuView() }
-                .offset(x: isMenu ? 0 : -UIScreen.main.bounds.width)
-                    // 添加3D效果 scroller 滑动很困难暂为找到解决办法
-//                .rotation3DEffect(Angle(degrees: isMenu ? 0 : 30), axis: (x: 0, y: 10, z: 0))
-
+                .offset(x: isMenu ? 0 : -SW)
                 .animation(.basic(duration: 0.25, curve: .easeInOut))
+                
             }
             .background(Color("background"))
-            .navigationBarTitle("练习Demo", displayMode: .inline) //设置导航文字和 样式
+            .navigationBarTitle("Coder", displayMode: .inline) //设置导航文字和 样式
         }
+        .presentation(
+            isModel ? Modal(LoadView(finish: openUser)) { self.isModel.toggle() } : nil
+        )
         
     }
     
     // 打开菜单按钮
-    func openMenu() {
-        print("打开菜单按钮")
-        withAnimation { isMenu.toggle() }
-    }
-    func openUser() {
-        print("点击了")
-    }
+    func openMenu() { withAnimation { isMenu.toggle() } }
+    //打开load
+    func openUser() { isModel.toggle() }
+    
     func openMessage() {
         print("点击了")
     }
@@ -93,13 +92,3 @@ struct HeaderView: View {
     }
 }
 
-let sources = [
-    Vitem(title: "SwiftUI", imageName: "item1", color: Color("gradient1")),
-    Vitem(title: "UIKit", imageName: "item2", color: Color("background10")),
-    Vitem(title: "Swift", imageName: "item3", color: Color("background5")),
-    Vitem(title: "Sketch", imageName: "item4", color: Color("background6"))]
-
-let sources1 = [Vitem(title: "Java从入门到放弃", imageName: "item6", color: .black),
-                Vitem(title: "程序员的自我修养", imageName: "item7", color: .black),
-                Vitem(title: "Ios从入门到放弃", imageName: "item8", color: .black),
-                Vitem(title: "不写代码之后能干些什么", imageName: "item9", color: .black)]
