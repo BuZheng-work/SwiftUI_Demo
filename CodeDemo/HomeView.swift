@@ -85,7 +85,7 @@ struct HeaderView: View {
         
             Text(title)
                 .bold()
-                .frame(width: UIScreen.main.bounds.size.width - 40,alignment: .leading)
+                .frame(width: SW - 40,alignment: .leading)
                 .padding(.leading, 50)
 //                .baselineOffset(60) 设置Text向上向下 +向上 -向下
         

@@ -30,3 +30,10 @@ let banks = [
 
 let SW = UIScreen.main.bounds.width
 let SH = UIScreen.main.bounds.height
+
+extension View {
+    
+    func defultShadow() -> Self.Modified<_ShadowEffect> {
+        return shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+    }
+}

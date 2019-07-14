@@ -25,14 +25,15 @@ struct LoadView : View {
                 .frame(width: 200, height: 150)
                 .padding()
             
-            
             // StaticMember 设置各种控件style 暂时没有ButtonStyle 的样式只有空扩展
-            TextField("输入你的账号", text: $account,onEditingChanged: accountEdit, onCommit: commit)
+            TextField("输入你的手机号", text: $account,onEditingChanged: accountEdit, onCommit: commit)
                 .textFieldStyle(.roundedBorder)
+                .textContentType(.creditCardNumber) //设置键盘样式
                 .padding()
-            
-            TextField("输入你的密码", text: $pwass,onEditingChanged: pwassEdit, onCommit: commit)
+            // placeholder 显示不出来。。。
+            SecureField("输入你的密码", text: $pwass, onCommit: commit)
                 .textFieldStyle(.roundedBorder)
+                .textContentType(.password)
                 .padding(.leading)
                 .padding(.trailing)
                 .padding(.bottom, 40)
@@ -44,8 +45,10 @@ struct LoadView : View {
                     .aspectRatio(contentMode: .fit)
                 
             }
-            .frame(width: UIScreen.main.bounds.size.width - 30, height: 49)
+            .frame(width: SW - 30, height: 49)
             Spacer()
+        }.tapAction {
+            UIApplication.shared.keyWindow?.endEditing(true)
         }
         .presentation($isAlter) {
             Alert(
@@ -79,5 +82,7 @@ struct LoadView : View {
     // 回车键触发
     func commit() {
         print("......")
+        
     }
 }
+

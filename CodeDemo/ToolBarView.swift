@@ -29,7 +29,7 @@ struct ToolBarView: View {
             .background(Color.white)
             .cornerRadius(20)
             .padding(.leading, -40)
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+            .defultShadow()
         
             Spacer()
             
@@ -42,7 +42,7 @@ struct ToolBarView: View {
             }
             .background(Color.white)
             .cornerRadius(20)
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+            .defultShadow()
             
             // 设置菜单按钮
             Button(action: mesageAction) {
@@ -52,7 +52,7 @@ struct ToolBarView: View {
             }
             .background(Color.white)
             .cornerRadius(20)
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+            .defultShadow()
             .padding(.trailing, 10)
             
         }

@@ -18,6 +18,7 @@ struct DetailView <Data>: View where Data: Item{
                 .renderingMode(.original)
                 .aspectRatio(contentMode: .fit)
                 .background(Color.black)
+        
         }
     
     }

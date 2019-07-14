@@ -18,8 +18,9 @@ struct WalletView: View {
             ZStack(alignment: .top) {
                 ForEach(0..<banks.count) { index in
                     BankCardView(bank: banks[index]) { self.thisCard = $0 }
+                    .frame(width: SW - 30, height: 200)
                     .padding(.top,CGFloat(index) * 64)
-                    .offset(y: self.thisCard  == .none ? 0 : self.thisCard == banks[index].name ?  -CGFloat(index) * 64 : 300
+                    .offset(y: self.thisCard  == .none ? 0 : self.thisCard == banks[index].name ?  -CGFloat(index) * 64 : 320
                     )
                     .animation(.spring())
                 }
@@ -75,9 +76,8 @@ struct BankCardView: View {
             }
         }
         .background(Color(bank.colorName))
-        .frame(width: SW - 30, height: 200)
         .cornerRadius(10)
-        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+        .defultShadow()
         .tapAction {self.tapHundler(self.bank.name)}
     }
     

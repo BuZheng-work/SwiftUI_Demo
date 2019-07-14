@@ -15,31 +15,16 @@ struct MenuView : View {
         
         VStack(alignment: .leading,spacing: 20) {
             
-            NavigationLink(destination: WalletView()) {
-                HStack {
-                    Image("IconCards")
-                    Text("钱包")
-                    Spacer()
-                }
-            }
-            .padding(.top,100)
-            .padding(.leading,leftSpace)
+            Group {
+                
+                NavigationCell(destination: WalletView(), title: "钱包", imageName: "IconCards")
+                    .padding(.top,100)
+                
+                NavigationCell(destination: Text("主页"), title: "主页", imageName:
+                    "IconHome")
+                
+                NavigationCell(destination: Text("设置"), title: "设置", imageName: "IconSettings")
             
-            NavigationLink(destination: Text("abc")) {
-                HStack {
-                    Image("IconHome")
-                    Text("主页")
-                    Spacer()
-                }
-            }
-            .padding(.leading,leftSpace)
-            
-            NavigationLink(destination: Text("abc")) {
-                HStack {
-                    Image("IconSettings")
-                    Text("设置")
-                    Spacer()
-                }
             }
             .padding(.leading,leftSpace)
             Spacer()
@@ -47,9 +32,28 @@ struct MenuView : View {
         .background(Color.white)
         .foregroundColor(Color.black)
         .cornerRadius(20)
-        .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10)
+        .defultShadow()
         .padding(.trailing, 50)
         .padding(.bottom, 10)
     }
 
 }
+
+struct NavigationCell<V>: View where V: View {
+
+    let destination: V
+    let title: String
+    let imageName: String
+    
+    var body: some View {
+        
+        NavigationLink(destination: destination) {
+            HStack {
+                Image(imageName)
+                Text(title)
+                Spacer()
+            }
+        }
+    }
+}
+

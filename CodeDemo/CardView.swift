@@ -32,7 +32,7 @@ struct CardView <Data>: View where Data: Item {
             }
             .background(item.color) //设置背景色 Color 准守View 协议
             .cornerRadius(20)  //设置圆角
-            .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.15), radius: 5, x: 0, y: 10) //设置阴影
+            .defultShadow() //设置阴影
         }
 
     }
