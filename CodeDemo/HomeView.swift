@@ -11,7 +11,8 @@ import SwiftUI
 struct HomeView : View {
     
     @State var isMenu = false
-    @State var isModel = false
+    @State var isLoad = false
+
     
     var body: some View {
         //设置导航
@@ -44,15 +45,15 @@ struct HomeView : View {
             .navigationBarTitle("Coder", displayMode: .inline) //设置导航文字和 样式
         }
         .presentation(
-            isModel ? Modal(LoadView(finish: openUser)) { self.isModel.toggle() } : nil
+            isLoad ? Modal(LoadView(finish: openUser)) { self.isLoad.toggle() } : nil
         )
         
     }
     
     // 打开菜单按钮
-    func openMenu() { withAnimation { isMenu.toggle() } }
+    func openMenu() { isMenu.toggle() }
     //打开load
-    func openUser() { isModel.toggle() }
+    func openUser() { isLoad.toggle() }
     
     func openMessage() {
         print("点击了")

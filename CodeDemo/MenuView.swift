@@ -17,6 +17,9 @@ struct MenuView : View {
             
             Group {
                 
+                
+                
+                
                 NavigationCell(destination: WalletView(), title: "钱包", imageName: "IconCards")
                     .padding(.top,100)
                 
@@ -26,7 +29,7 @@ struct MenuView : View {
                 NavigationCell(destination: Text("设置"), title: "设置", imageName: "IconSettings")
             
             }
-            .padding(.leading,leftSpace)
+            .padding([.leading,.trailing])
             Spacer()
         }
         .background(Color.white)
@@ -48,11 +51,18 @@ struct NavigationCell<V>: View where V: View {
     var body: some View {
         
         NavigationLink(destination: destination) {
-            HStack {
-                Image(imageName)
-                Text(title)
-                Spacer()
+            
+            ZStack {
+                // 设置渐变色边框 LinearGradient 实现 shapeStyle  
+                Rectangle()
+                    .stroke(LinearGradient(gradient: Gradient(colors: [Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
+                
+                HStack {
+                    Image(imageName)
+                    Text(title)
+                }
             }
+            .frame(height: 44)
         }
     }
 }

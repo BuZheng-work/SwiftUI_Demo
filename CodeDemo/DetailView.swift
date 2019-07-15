@@ -13,6 +13,22 @@ struct DetailView <Data>: View where Data: Item{
     var body: some View {
         
         VStack {
+            
+            ScrollView(.horizontal, showsIndicators: false) {
+                
+                HStack {
+                    ForEach(0..<3) { index in
+                        Image(self.item.imageName)
+                            .resizable()
+                            .renderingMode(.original)
+                            .aspectRatio(contentMode: .fit)
+                            .background(Color.black)
+                            .frame(width: SW, height: 120)
+                    }
+                }
+            
+            }
+            
             Image(item.imageName)
                 .resizable()
                 .renderingMode(.original)
