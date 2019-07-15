@@ -1,7 +1,7 @@
 # SwiftUI_Demo
 swiftUI 练习项目记录一些基本视图的使用和坑
 
-##Text
+## Text
 文本视图
 
 ```
@@ -15,7 +15,7 @@ swiftUI 练习项目记录一些基本视图的使用和坑
 ```
  
  
-##Image
+## Image
 image视图
 
 ```
@@ -29,7 +29,7 @@ Image("background")
                 .aspectRatio(contentMode: .fit)
 ```        
 *如果容器为NavgationLink 有可能造成图片被渲染成蓝色 所以要添加图片的渲染模式为原色        
-##Button
+## Button
 按钮视图
  
 ``` 
@@ -52,7 +52,7 @@ Button(action: {//TODO}) {
 	        }
        }
 ```
-##TextField
+## TextField
 输入框视图
 
 ```
@@ -108,7 +108,7 @@ tabItem 为协议 View 的扩展方法 所以 任何实现 View 协议的视图�
 
  *注意一定要设置tag 视图只会显示第一个 切换 tabItem 其他不显示
  
-##NavigationView
+## NavigationView
 导航容器为容器添加导航条
 
  ```
