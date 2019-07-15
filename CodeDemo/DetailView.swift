@@ -2,7 +2,7 @@
 //  Detail.swift
 //  CodeDemo
 //
-//  Created by 籍孟飞 on 2019/7/11.
+//  Created by isonmal on 2019/7/11.
 //  Copyright © 2019 isonmal. All rights reserved.
 //
 
@@ -21,12 +21,12 @@ struct DetailView <Data>: View where Data: Item{
                         Image(self.item.imageName)
                             .resizable()
                             .renderingMode(.original)
-                            .aspectRatio(contentMode: .fit)
+                            .aspectRatio(contentMode: .fill)
                             .background(Color.black)
-                            .frame(width: SW, height: 120)
+                            .frame(width: SW, height: 250)
+                            .padding(.trailing,10)
                     }
                 }
-            
             }
             
             Image(item.imageName)

@@ -15,6 +15,7 @@
 		8F4C60C622D8663F00CA9261 /* WalletView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C522D8663F00CA9261 /* WalletView.swift */; };
 		8F4C60C822D9746400CA9261 /* LoadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C722D9746400CA9261 /* LoadView.swift */; };
 		8F4C60CA22D9944C00CA9261 /* Sources.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F4C60C922D9944C00CA9261 /* Sources.swift */; };
+		8FAB770D22DC5CB8009FCAD8 /* BankCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FAB770C22DC5CB8009FCAD8 /* BankCardView.swift */; };
 		8FD9AF8122D7206D00CAA508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8022D7206D00CAA508 /* AppDelegate.swift */; };
 		8FD9AF8322D7206D00CAA508 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8222D7206D00CAA508 /* SceneDelegate.swift */; };
 		8FD9AF8522D7206D00CAA508 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FD9AF8422D7206D00CAA508 /* HomeView.swift */; };
@@ -32,6 +33,7 @@
 		8F4C60C522D8663F00CA9261 /* WalletView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletView.swift; sourceTree = "<group>"; };
 		8F4C60C722D9746400CA9261 /* LoadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadView.swift; sourceTree = "<group>"; };
 		8F4C60C922D9944C00CA9261 /* Sources.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sources.swift; sourceTree = "<group>"; };
+		8FAB770C22DC5CB8009FCAD8 /* BankCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankCardView.swift; sourceTree = "<group>"; };
 		8FD9AF7D22D7206D00CAA508 /* CodeDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8FD9AF8022D7206D00CAA508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8FD9AF8222D7206D00CAA508 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				8F4C60C322D84F5100CA9261 /* MenuView.swift */,
 				8F4C60C522D8663F00CA9261 /* WalletView.swift */,
 				8F1AC6C422D77FCF00D6CBCA /* DetailView.swift */,
+				8FAB770C22DC5CB8009FCAD8 /* BankCardView.swift */,
 				8F4C60C922D9944C00CA9261 /* Sources.swift */,
 				8FD9AF8622D7206E00CAA508 /* Assets.xcassets */,
 				8FD9AF8B22D7206E00CAA508 /* LaunchScreen.storyboard */,
@@ -180,6 +183,7 @@
 				8F4C60C022D8499B00CA9261 /* CardScrollerView.swift in Sources */,
 				8F4C60BE22D8497600CA9261 /* ToolBarView.swift in Sources */,
 				8F1AC6C522D77FCF00D6CBCA /* DetailView.swift in Sources */,
+				8FAB770D22DC5CB8009FCAD8 /* BankCardView.swift in Sources */,
 				8FD9AF8522D7206D00CAA508 /* HomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

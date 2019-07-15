@@ -2,7 +2,7 @@
 //  MenuView.swift
 //  CodeDemo
 //
-//  Created by 籍孟飞 on 2019/7/12.
+//  Created by isonmal on 2019/7/12.
 //  Copyright © 2019 isonmal. All rights reserved.
 //
 
@@ -15,11 +15,11 @@ struct MenuView : View {
         
         VStack(alignment: .leading,spacing: 20) {
             
+            Circle().stroke(LinearGradient(gradient: Gradient(colors: [Color.red,Color.blue]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                .frame(width: 80,height: 80)
+                .padding()
+            
             Group {
-                
-                
-                
-                
                 NavigationCell(destination: WalletView(), title: "钱包", imageName: "IconCards")
                     .padding(.top,100)
                 
@@ -53,7 +53,7 @@ struct NavigationCell<V>: View where V: View {
         NavigationLink(destination: destination) {
             
             ZStack {
-                // 设置渐变色边框 LinearGradient 实现 shapeStyle  
+                // 设置渐变色边框 LinearGradient 实现 shapeStyle
                 Rectangle()
                     .stroke(LinearGradient(gradient: Gradient(colors: [Color.red,Color.blue]), startPoint: .leading, endPoint: .trailing))
                 

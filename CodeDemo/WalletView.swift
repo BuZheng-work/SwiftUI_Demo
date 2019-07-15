@@ -2,7 +2,7 @@
 //  wallet View.swift
 //  CodeDemo
 //
-//  Created by 籍孟飞 on 2019/7/12.
+//  Created by isonmal on 2019/7/12.
 //  Copyright © 2019 isonmal. All rights reserved.
 //
 
@@ -33,55 +33,7 @@ struct WalletView: View {
 
 }
 
-struct BankCardView: View {
-    let bank: Bank
-    let tapHundler: (String)->Void
-    var body: some View {
-        
-        VStack {
-            
-            HStack(alignment: .top) {
-                Image(bank.shortName)
-                    .resizable()
-                    .renderingMode(.original)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 32, height: 32)
-                    .padding(.top, 15)
-                    .padding(.leading, 15)
-                
-                VStack(alignment: .leading) {
-                    Text(bank.name)
-                        .bold()
-                        .foregroundColor(.white)
-                        .padding(.top, 10)
-                    Text("信用卡")
-                        .font(.subheadline)
-                        .foregroundColor(.white)
-                    Spacer()
-                }
-                Spacer()
-            }
-            
-            HStack {
-                Text(bank.bankNumber)
-                    .foregroundColor(.white)
-                    .padding()
-                Spacer()
-                Image("YL")
-                    .resizable()
-                    .renderingMode(.original)
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 64, height: 64)
-                    .padding()
-            }
-        }
-        .background(Color(bank.colorName))
-        .cornerRadius(10)
-        .defultShadow()
-        .tapAction {self.tapHundler(self.bank.name)}
-    }
-    
-}
+
 
 struct Bank: Identifiable {
     let id = UUID()

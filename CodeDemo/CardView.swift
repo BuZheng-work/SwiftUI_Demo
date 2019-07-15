@@ -2,7 +2,7 @@
 //  CardView.swift
 //  CodeDemo
 //
-//  Created by 籍孟飞 on 2019/7/12.
+//  Created by isonmal on 2019/7/12.
 //  Copyright © 2019 isonmal. All rights reserved.
 //  首页卡片视图
 
